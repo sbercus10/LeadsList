@@ -1,28 +1,70 @@
-<h2>Success! Your Company Has Been Created.</h2>
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @company.name %>
-</p>
-
-<p>
-  <b>Location:</b>
-  <%= @company.location %>
-</p>
-
-<p>
-  <b>Market:</b>
-  <%= @company.market %>
-</p>
-
-<p>
-  <b>Financing stage:</b>
-  <%= @company.financing_stage %>
-</p>
+<h2><%= @company.name %></h2>
 
 
-<%= link_to 'Edit', edit_company_path(@company) %>
+<div class="row well">
+  <div class="col-md-6 text-center">
+    <p>
+      <b>Name:</b>
+      <%= @company.name %>
+    </p>
+
+    <p>
+      <b>Location:</b>
+      <%= @company.location %>
+    </p>    
+  </div>
+  <div class="col-md-6 text-center">
+    <p>
+      <b>Market:</b>
+      <%= @company.market %>
+    </p>
+    <p>
+      <b>Financing stage:</b>
+      <%= @company.financing_stage %>
+    </p>  
+  </div>
+  <%= link_to 'Edit Company Information', edit_company_path(@company), class: "pull-right" %>
+</div>
+
+
+<div class="row well">
+  <div class="col-md-3">
+    <div class="panel panel-primary">
+      <div class="panel-heading text-center">Total Investors</div>
+      <div class="panel-body text-center">
+        ######
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-success">
+      <div class="panel-heading text-center">Committed Investors</div>
+      <div class="panel-body text-center">
+        ######
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-info">
+      <div class="panel-heading text-center">Maybe Investors</div>
+      <div class="panel-body text-center">
+        ######
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-danger">
+      <div class="panel-heading text-center">Rejected Investors</div>
+      <div class="panel-body text-center">
+        ######
+      </div>
+    </div>
+  </div>
+</div>
 <br>
+<hr>
+<hr>
 <br>
-<%= link_to 'Add Investors', investors_path %>
+<div class="col-md-6 col-md-offset-3">
+<%= link_to 'Add New Investor', new_investor_path, class: "btn btn-primary btn-lg center-block" %>
+</div>
