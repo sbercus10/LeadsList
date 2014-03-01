@@ -1,31 +1,109 @@
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
 
-        <div class="jumbotron hero-spacer">
-            <h1>Track My Investor</h1>
-            <p></p>
-            <br/>
-            <br/>
-            
-            </p>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Investor CRM for Startups</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Full Page Image Header Area -->
+    <div id="top" class="header">
+        <div class="vert-text">
+           <br>
+           <br>
+           <br>
+            <h1>LeadsList.co</h1>
+            <h3>
+               Investor CRM for Startups. Moving beyond the Excel era.<br>
+                <br>
+                <br>
+            <%= link_to "Get Started Now", '/users/sign_up', class: "btn btn-default btn-lg" %>
+            <!-- <a href="#about" class="btn btn-default btn-lg">Get Started Now</a><%= link_to new_user_path %> -->
         </div>
-
-        <hr>
-
-        
-
-        <hr>
-
-        <footer>
+    </div>
+    <!-- /Full Page Image Header Area -->
+    <br>
+    <br>
+    <br>
+    <!-- Services -->
+    <div id="services" class="services">
+        <div class="container">
             <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Track My Investor 2013</p>
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h2>Why Use LeadsList?</h2>
+                    <hr>
                 </div>
             </div>
-        </footer>
-
+            <div class="row">
+                <div class="col-md-2 col-md-offset-2 text-center">
+                    <div class="service-item">
+                        <i class="service-icon fa fa-rocket"></i>
+                        <h4>Easy to Use</h4>
+                        <p>Super easy to use and much better than the traditional Excel spreadsheets</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="service-item">
+                        <i class="service-icon fa fa-magnet"></i>
+                        <h4>Share with Team</h4>
+                        <p>Much easy way to track and share the status with your team and current investors </p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="service-item">
+                        <i class="service-icon fa fa-shield"></i>
+                        <h4>Find More Investors</h4>
+                        <p>We suggest investors that you didn't even know existed who we know are interested in your industry</p>
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                    <div class="service-item">
+                        <i class="service-icon fa fa-pencil"></i>
+                        <h4>Track Your Stats</h4>
+                        <p>Get updated stats in real time. Know your conversion rate and other relevant stats</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /.container -->
+    <!-- /Services -->
 
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <!-- Call to Action -->
+    <div class="call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <h3>Cool Right? Still Interested?</h3>
+                    <a href="#" class="btn btn-lg btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 text-center">
+                    <p>Copyright &copy; LeadsList 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+</body>
+
+</html>
