@@ -4,6 +4,8 @@ Leadslist::Application.routes.draw do
 
   resources :companies
 
+get "home/company_profile"
+get "home/investors"
 
   authenticated :user do
     root :to => 'home#index'
@@ -13,5 +15,6 @@ Leadslist::Application.routes.draw do
   devise_for :users
   resources :users
 end
+
 
 # get "/companies/_form"
