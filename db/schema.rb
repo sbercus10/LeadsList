@@ -11,7 +11,41 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140301152210) do
+ActiveRecord::Schema.define(:version => 20140301184029) do
+
+  create_table "companies", :force => true do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "market"
+    t.string   "financing_stage"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  create_table "companies_investors", :id => false, :force => true do |t|
+    t.integer "company_id"
+    t.integer "investor_id"
+  end
+
+  add_index "companies_investors", ["company_id", "investor_id"], :name => "index_companies_investors_on_company_id_and_investor_id"
+  add_index "companies_investors", ["investor_id"], :name => "index_companies_investors_on_investor_id"
+
+  create_table "investors", :force => true do |t|
+    t.string   "name"
+    t.text     "bio"
+    t.integer  "follower_count"
+    t.string   "angellist_url"
+    t.string   "angellist_image_url"
+    t.string   "location"
+    t.string   "email_address"
+    t.string   "phone_number"
+    t.string   "job_title"
+    t.string   "company_name"
+    t.string   "company_url"
+    t.string   "investment_status"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

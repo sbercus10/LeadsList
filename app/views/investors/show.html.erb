@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @investor.name %>
+</p>
+
+<p>
+  <b>Bio:</b>
+  <%= @investor.bio %>
+</p>
+
+<p>
+  <b>Follower count:</b>
+  <%= @investor.follower_count %>
+</p>
+
+<p>
+  <b>Angellist url:</b>
+  <%= @investor.angellist_url %>
+</p>
+
+<p>
+  <b>Angellist image url:</b>
+  <%= @investor.angellist_image_url %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @investor.location %>
+</p>
+
+<p>
+  <b>Email address:</b>
+  <%= @investor.email_address %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @investor.phone_number %>
+</p>
+
+<p>
+  <b>Job title:</b>
+  <%= @investor.job_title %>
+</p>
+
+<p>
+  <b>Company name:</b>
+  <%= @investor.company_name %>
+</p>
+
+<p>
+  <b>Company url:</b>
+  <%= @investor.company_url %>
+</p>
+
+<p>
+  <b>Investment status:</b>
+  <%= @investor.investment_status %>
+</p>
+
+
+<%= link_to 'Edit', edit_investor_path(@investor) %> |
+<%= link_to 'Back', investors_path %>

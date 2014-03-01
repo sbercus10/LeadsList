@@ -1,0 +1,45 @@
+<h1>Listing investors</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>Follower count</th>
+    <th>Angellist url</th>
+    <th>Angellist image url</th>
+    <th>Location</th>
+    <th>Email address</th>
+    <th>Phone number</th>
+    <th>Job title</th>
+    <th>Company name</th>
+    <th>Company url</th>
+    <th>Investment status</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @investors.each do |investor| %>
+  <tr>
+    <td><%= investor.name %></td>
+    <td><%= investor.bio %></td>
+    <td><%= investor.follower_count %></td>
+    <td><%= investor.angellist_url %></td>
+    <td><%= investor.angellist_image_url %></td>
+    <td><%= investor.location %></td>
+    <td><%= investor.email_address %></td>
+    <td><%= investor.phone_number %></td>
+    <td><%= investor.job_title %></td>
+    <td><%= investor.company_name %></td>
+    <td><%= investor.company_url %></td>
+    <td><%= investor.investment_status %></td>
+    <td><%= link_to 'Show', investor %></td>
+    <td><%= link_to 'Edit', edit_investor_path(investor) %></td>
+    <td><%= link_to 'Destroy', investor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Investor', new_investor_path %>
