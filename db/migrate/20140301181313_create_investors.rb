@@ -13,6 +13,7 @@ class CreateInvestors < ActiveRecord::Migration
       t.string :company_name
       t.string :company_url
       t.string :investment_status
+      t.integer :company_id
 
       t.timestamps
     end

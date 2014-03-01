@@ -26,7 +26,7 @@
   <%= link_to 'Edit Company Information', edit_company_path(@company), class: "pull-right" %>
 </div>
 
-
+<h4>Investor Summary</h4>
 <div class="row well">
   <div class="col-md-3">
     <div class="panel panel-primary">
@@ -62,6 +62,18 @@
   </div>
 </div>
 <br>
+<h4>Investor Profiles</h4>
+<div class="row">
+<% @investors.each do |investor| %>
+  <div class="well col-md-3">
+    <p><%= investor.name %></p>
+    <p><%= investor.email_address %></p>
+    <p><%= investor.phone_number %></p>
+    <p><%= investor.job_title + ", " + investor.company_name %></p>
+    <%= link_to investor.company_name, company_url %>
+  </div>
+<% end %>
+</div>
 <hr>
 <hr>
 <br>
