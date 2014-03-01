@@ -1,8 +1,13 @@
 Leadslist::Application.routes.draw do
-  resources :investors
+  resources :investors do
+    resources :companies
+  end
 
 
-  resources :companies
+  resources :companies do 
+    resources :investors
+  end
+
 
 
   authenticated :user do

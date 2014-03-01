@@ -2,6 +2,9 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <div class='hide'>
+      <%= f.association :companies, selected: params[:company_id] %>
+    </div>
     <%= f.input :name %>
     <%= f.input :bio %>
     <%= f.input :follower_count %>
