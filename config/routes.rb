@@ -13,7 +13,7 @@ get "home/company_profile"
 get "home/investors"
 
   authenticated :user do
-    root :to => 'home#index'
+    root :to => 'companies#new'
   end
 
   root :to => "home#index"

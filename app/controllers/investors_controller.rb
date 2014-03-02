@@ -25,6 +25,7 @@ class InvestorsController < ApplicationController
   # GET /investors/new.json
   def new
     @investor = Company.find(params[:company_id]).investors.new
+
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @investor }
@@ -40,7 +41,6 @@ class InvestorsController < ApplicationController
   # POST /investors.json
   def create
     @investor = Investor.new(params[:investor])
-    
 
     respond_to do |format|
       if @investor.save

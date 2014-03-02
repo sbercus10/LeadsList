@@ -32,7 +32,7 @@
     <div class="panel panel-primary">
       <div class="panel-heading text-center">Total Investors</div>
       <div class="panel-body text-center">
-        ######
+        <%= @company.investors.count %>
       </div>
     </div>
   </div>
@@ -40,7 +40,7 @@
     <div class="panel panel-success">
       <div class="panel-heading text-center">Committed Investors</div>
       <div class="panel-body text-center">
-        ######
+        <%= @company.investors.where(investment_status: "Yes").count %>
       </div>
     </div>
   </div>
@@ -48,7 +48,7 @@
     <div class="panel panel-info">
       <div class="panel-heading text-center">Maybe Investors</div>
       <div class="panel-body text-center">
-        ######
+        <%= @company.investors.where(investment_status: "Maybe").count %>
       </div>
     </div>
   </div>
@@ -56,7 +56,7 @@
     <div class="panel panel-danger">
       <div class="panel-heading text-center">Rejected Investors</div>
       <div class="panel-body text-center">
-        ######
+        <%= @company.investors.where(investment_status: "No").count %>
       </div>
     </div>
   </div>

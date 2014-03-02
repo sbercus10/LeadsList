@@ -6,17 +6,17 @@
       <%= f.association :company, selected: params[:company_id] %>
     </div>
     <%= f.input :name %>
-    <%= f.input :bio %>
-    <%= f.input :follower_count %>
-    <%= f.input :angellist_url %>
-    <%= f.input :angellist_image_url %>
-    <%= f.input :location %>
+    <%#= f.input :bio %>
+    <%#= f.input :follower_count %>
+    <%#= f.input :angellist_url %>
+    <%#= f.input :angellist_image_url %>
+    <%#= f.input :location %>
     <%= f.input :email_address %>
     <%= f.input :phone_number %>
-    <%= f.input :job_title %>
+    <%= f.input :job_title, collection: ["Partner","Principal","Analyst","Angel","Friends & Family"], include_blank: false %>
     <%= f.input :company_name %>
-    <%= f.input :company_url %>
-    <%= f.input :investment_status %>
+    <%#= f.input :company_url %>
+    <%= f.input :investment_status, collection: ["Yes","No","Maybe"], include_blank: false %>
   </div>
 
   <div class="form-actions">
